@@ -86,4 +86,9 @@ public class SubmitController {
         int totalSubmits = submitService.getTotalSubmitsByUserId(userId);
         return ResponseEntity.ok(totalSubmits);
     }
+    @GetMapping("/totalUsers/{examId}")
+    public ResponseEntity<?> getTotalUsersByExamId(@PathVariable int examId) {
+        int totalUsers = submitService.getTotalUsersByExamId(examId);
+        return ResponseEntity.ok(totalUsers);
+    }
 }

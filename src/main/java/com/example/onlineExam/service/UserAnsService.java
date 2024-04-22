@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Service
 public interface UserAnsService {
+    public List<UserAnswer> getAllUserAnswers();
     public boolean create(UserAnswer userAnswer);
     public Optional<UserAnswer> geUserAnsById(int id);
     public List<UserAnswer> getUserAnswersByUserId(int id);
@@ -17,4 +18,5 @@ public interface UserAnsService {
     public List<UserAnswer> getUserAnswersByUserIdAndExamId(int userId, int examId);
     public  boolean updateUserAnswer(int id, UserAnswer userAnswer);
     public boolean deleteUserAnswer(int id);
+
 }

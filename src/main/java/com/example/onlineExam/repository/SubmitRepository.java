@@ -11,5 +11,6 @@ public interface SubmitRepository  extends JpaRepository<Submit, Integer> {
     Submit findByUserIdAndExamId(int userId, int examId);
     int countByExamId(int examId);
     int countByUserId(int userId);
+    int countDistinctUserIdByExamId(int examId);
 
 }

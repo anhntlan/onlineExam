@@ -27,7 +27,10 @@ public class ExamController{
         public Optional<Exam> getExamById(@PathVariable Integer id) {
                 return examService.getExamById(id);
         }
-
+        @GetMapping("/byStatus/{status}")
+        public List<Exam> getExamsByStatus(@PathVariable String status) {
+                return examService.getExamsByStatus(status);
+        }
         @PostMapping("/add")
 //        public Exam addExam(@RequestBody Exam exam) {
 //                return examService.create(exam);
@@ -57,6 +60,7 @@ public class ExamController{
                         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("can not find the exam");
                 }
         }
+
 
 
 

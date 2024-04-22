@@ -17,6 +17,11 @@ public class UserAnsServiceImpl implements UserAnsService {
     UserAnsRepository userAnsRepository;
 
     @Override
+    public List<UserAnswer> getAllUserAnswers() {
+        return userAnsRepository.findAll();
+    }
+
+    @Override
     public boolean create(UserAnswer userAnswer) {
         try {
             userAnsRepository.save(userAnswer);

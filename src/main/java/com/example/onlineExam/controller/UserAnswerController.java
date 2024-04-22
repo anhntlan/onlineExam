@@ -18,6 +18,10 @@ public class UserAnswerController {
     @Autowired
     UserAnsService userAnsService;
 
+    @GetMapping("")
+    public List<UserAnswer> getAllUserAnswers() {
+        return userAnsService.getAllUserAnswers();
+    }
     @PostMapping("/add")
 
     public ResponseEntity<String> createUserAnswer(@RequestBody UserAnswer userAnswer) {

@@ -84,4 +84,10 @@ public class SubmitServiceImpl implements SubmitService {
     public int getTotalSubmitsByUserId(int userId) {
         return submitRepository.countByUserId(userId);
     }
+
+    @Override
+    public int getTotalUsersByExamId(int examId) {
+        return submitRepository.countDistinctUserIdByExamId(examId);
+
+    }
 }

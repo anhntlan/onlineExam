@@ -18,5 +18,6 @@ public interface SubmitService {
     Submit getSubmitByUserIdAndExamId(int userId, int examId);
     int getTotalSubmitsByExamId(int examId);
     int getTotalSubmitsByUserId(int userId);
+    int getTotalUsersByExamId(int examId);
 
 }

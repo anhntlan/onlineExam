@@ -65,5 +65,10 @@ public class ExamServiceImpl implements ExamService {
         return examRepository.findById(id);
     }
 
+    @Override
+    public List<Exam> getExamsByStatus(String status) {
+        return examRepository.findByStatus(status);
+    }
+
 
 }
